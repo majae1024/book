@@ -1,0 +1,174 @@
+@charset "utf-8";
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+	list-style: none;
+	font-family: "NotosansR", NanumGothic, Dotum, Arial, sans-serif;
+	font-size: 12px;
+}
+
+ul,
+li,
+ol {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+
+#box > h2{
+	
+	padding-top: 50px;
+	padding-bottom: 20px;
+	font-size: 20px;
+	text-align: center;
+	color:rgb(255, 255, 255);
+}
+
+#bclr {
+	margin: 0 auto;
+	width: 100%;
+	height: 1000px;
+    background-color: #E1E8EE;
+    position: relative;
+}
+
+#box {
+    position: relative; /* 자식 가상 요소가 부모 영역에 맞춰 배치되도록 함 */
+    width: 500px;
+    height: 600px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    overflow: hidden; /* 가상 요소가 box 바깥으로 넘치지 않게 함 */
+    box-shadow: 3px 3px rgb(128, 128, 128);
+}
+
+#box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/logbook1.avif');
+    background-repeat: no-repeat;
+    background-size: 580px 600px;
+    background-position: left bottom;
+    filter: blur(3px) brightness(0.95); /* 블러 및 어둡게 처리 */
+    opacity: 0.7; /* 배경 투명도 */
+    z-index: 1; /* form보다 뒤에 오도록 설정 */
+}
+
+form {
+    position: relative;
+    z-index: 2; /* 가상 요소보다 위에 위치 */
+    margin: 0 auto;
+    padding-top: 10px;
+    width: 400px;
+	height: 100%;
+    opacity: 1;
+    filter: none; /* blur나 brightness 제거 */
+}
+
+
+
+.iptBox{
+	width: 100%;
+	height: 268px;
+	border-radius: 25px;
+	overflow: hidden;
+}
+
+.ipt{
+	width: 101%;
+	height: 45px;
+	border: 1px solid #1090fd;
+	outline: none;
+    box-shadow: none;
+	padding-left: 20px;
+	font-size: 15px;
+	font-weight: bold;
+	color :rgb(2, 112, 202);
+}
+.iptBox :last-child{
+	margin-bottom: 7px;
+}
+.pdUs{
+	top:70%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	color:white;
+	font-weight: bold;
+}
+.btn{
+	top:80%;
+	left:50%;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	width:247px;
+	height:auto;
+}
+
+.btn > input ,.btn > a >input{
+	
+	width: 120px;
+	height: 35px;
+	border: 1px solid #1090fd;	
+	border-radius: 10px;
+	color:rgb(2, 112, 202);
+	font-size: 15px;
+	font-weight:bold;
+	letter-spacing: 6px;
+	text-align: center;
+	line-height: 1px;
+	background: linear-gradient(#f6f9fd -1%, rgb(225, 234, 249) 11%, rgb(255, 255, 255) 99%);
+}
+
+.btn > input:hover, .btn > a > input:hover{
+	color: rgb(51, 85, 166);
+	font-weight: 200;
+	background: linear-gradient(#f6f9fd -1%, rgb(237, 238, 239) 11%, rgb(255, 255, 255) 99%);	
+	cursor: pointer;
+}
+
+
+#dbCheck{
+	position: absolute;
+	margin-top: 16.3%;
+	margin-left: 70%;
+	width:80px;
+	height: 25px;
+
+}
+#dbCheck > input{
+	font-size: 15px;
+	font-weight: 500;
+	width: 100%;
+	height: 23px;
+	color: rgb(0, 0, 196);
+	border: 0px;
+	border-radius: 30px;
+	background-color: white;
+}
+
+#dbCheck > input:hover{
+	font-weight: bold;
+	color: rgb(0, 0, 157);
+	cursor:pointer;
+	}
+	
+.logoBox{
+	position: absolute;
+	top:90%;
+	left:50%;
+	transform: translate(-50%,-50%);
+}
